@@ -1,11 +1,17 @@
 /**
  * Beat class that keeps track of playing the audio
- * HINT: Make sure to pass in the audioSrc as parameter to create a new audio track
- * HINT: Create a play function to play the audio if called 
  */
-class Beat {
-}
 
+class Beat {
+    constructor(audioSrc){
+        this.audio = new Audio(audioSrc);
+    }
+
+    play = () => {
+        this.audio.currentTime = 0;
+        this.audio.play();
+    }
+}
 
 
 /**
